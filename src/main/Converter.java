@@ -10,11 +10,11 @@ public class Converter {
 		
 		int menuSelection = 0;
 		int quit = 5;
-		float ounce;
-		float mL;
-		double cup;
-		double liter;
-		double gallon;
+//		float ounce;
+//		float mL;
+//		double cup;
+//		double liter;
+//		double gallon;
 		
 		
 		//start loop and print menu, collect input
@@ -41,7 +41,7 @@ public class Converter {
 					quit();
 					break;
 				
-				}
+				
 		 
 	}
 		while (menuSelection != quit);
@@ -69,7 +69,9 @@ public class Converter {
 //		double liter;
 //		double gallon;
 
-	public static void ozToML(float ounce, float mL) {
+	public void ozToML() {
+		float ounce = 0;
+		float mL = 0;
 		//receive input for ounce to mL conversion
 		ounce = input.nextFloat();
 		//computation, 1 oz = 29.5735296 ml
@@ -104,8 +106,10 @@ public class Converter {
 	
 	public static void quit() {
 		System.out.println("Hope you had fun converting, Bye-Bye!");
+		}
+	
+	
 	}
 	
-
-	
 }
+
