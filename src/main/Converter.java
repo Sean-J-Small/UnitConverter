@@ -17,11 +17,38 @@ public class Converter {
 		double gallon;
 		
 		
-		//start the loop, request input
+		//start loop and print menu, collect input
+		do {
 		
-		while (menuSelection != quit)
-			menuSelection = input.nextInt()
-		
+				menu();
+				menuSelection = input.nextInt();
+				
+				//Switch statement to pick case based on input
+				switch (menuSelection) {
+				case 1:
+					ozToML(ounce, mL);
+					break;
+				case 2:
+					cupToOz(ounce, cup);
+					break;
+				case 3:
+					lToML(liter, mL);
+					break;
+				case 4:
+					gallonToL(gallon, liter);
+					break;
+				case 5:
+					quit();
+					break;
+				
+				}
+		 
+	}
+		while (menuSelection != quit);
+			
+		}
+	
+	
 		
 		
 	
@@ -55,7 +82,7 @@ public class Converter {
 		cup = input.nextFloat();
 //		//computation, 1 oz = 0.125 cups
 		ounce = (float)(cup * 0.125);
-		System.out.println(cup + " Cups is equal to " + ounce + " ounces." );}
+		System.out.println(cup + " Cups is equal to " + ounce + " ounces." );
 	}
 	
 	public static void lToML(double liter, float mL) {
@@ -70,7 +97,7 @@ public class Converter {
 		//receive input for gallon to liter conversion
 		gallon = input.nextFloat();
 //		//computation, 1 gallon = 3.785 Liters
-		liter = (float)(gallon * 3.785);
+		liter = (gallon * 3.785);
 		System.out.println(gallon + " Gallons is equal to " + liter + " Liters." );
 //	
 	}
